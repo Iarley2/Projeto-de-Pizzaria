@@ -19,12 +19,12 @@ def abrir_cadastro():
 
     nome = ttk.Label(campos_para_digitar, text="Nome:", font=("", 25))
     nome.pack()
-    entrada_nome = tk.Entry(campos_para_digitar, bg= "blue", font=("", 15))
+    entrada_nome = tk.Entry(campos_para_digitar, font=("", 15))
     entrada_nome.pack()
 
     endereço = ttk.Label(campos_para_digitar, text="Endereço", font=("", 25))
     endereço.pack()
-    entrada_endereco = tk.Entry(campos_para_digitar, bg= "red", font=("", 15))
+    entrada_endereco = tk.Entry(campos_para_digitar, font=("", 15))
     entrada_endereco.pack()
 
     def salvar():
@@ -34,12 +34,12 @@ def abrir_cadastro():
      cliente = Cadastro(pessoa, endereco)
      cliente.cadastrar()
 
-     print(Cadastros)
-
-
+     for i in Cadastros:
+        print(i)
 
     ações = ttk.Frame(cadastro, padding=20)
     ações.pack()
 
-    botão_de_cadastro = tk.Button(ações, text="Cadastrar", command= salvar).pack()
+    botão_de_cadastro = tk.Button(ações, text="Cadastrar", command= salvar, pady= 15)
+    botão_de_cadastro.pack()
 
