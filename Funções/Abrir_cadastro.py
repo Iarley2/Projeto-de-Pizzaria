@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes import Cadastro
+from Classes import Cadastro, Cadastros
 
 def abrir_cadastro():
     cadastro = tk.Toplevel()
@@ -17,13 +17,25 @@ def abrir_cadastro():
     campos_para_digitar = ttk.Frame(cadastro, padding=20)
     campos_para_digitar.pack()
 
-    nome = ttk.Label(campos_para_digitar, text="Nome:")
+    nome = ttk.Label(campos_para_digitar, text="Nome:", font=("", 25))
     nome.pack()
-    entrada_nome = tk.Entry(campos_para_digitar)
+    entrada_nome = tk.Entry(campos_para_digitar, bg= "blue", font=("", 15))
     entrada_nome.pack()
 
+    endereço = ttk.Label(campos_para_digitar, text="Endereço", font=("", 25))
+    endereço.pack()
+    entrada_endereco = tk.Entry(campos_para_digitar, bg= "red", font=("", 15))
+    entrada_endereco.pack()
+
     def salvar():
-        cliente = Cadastro(entrada_nome.get())
+     pessoa = entrada_nome.get()
+     endereco = entrada_endereco.get()
+
+     cliente = Cadastro(pessoa, endereco)
+     cliente.cadastrar()
+
+     print(Cadastros)
+
 
 
     ações = ttk.Frame(cadastro, padding=20)
