@@ -6,17 +6,23 @@ MenuDaPizzaria = None
 def main():
     MenuDaPizzaria = tk.Tk()
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
-    MenuDaPizzaria.geometry("700x600")
+    MenuDaPizzaria.geometry("800x600")
 
     inicio = ttk.Frame(MenuDaPizzaria, padding=30)
     inicio.pack(fill="x")
 
-    cabecalho = ttk.Label(
+    cabecalho = tk.Label( #Criação do título do menu
         MenuDaPizzaria, 
         text="Pizzaria Raio de Sabores", 
-        font="Arial"
+        font=("Arial", 50),
+        bg= "Green"
     )
     cabecalho.pack()
+
+    acoes = tk.Button(MenuDaPizzaria, text="Fazer Pedido", command=abrir_cardapio,
+    pady=60,
+    padx=80,
+    fg="White", bg="Red").pack()
 
     MenuDaPizzaria.mainloop()
 
