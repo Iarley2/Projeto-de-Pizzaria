@@ -14,24 +14,18 @@ def main():
     cabecalho = tk.Label( #Criação do título do menu
         MenuDaPizzaria, 
         text="Pizzaria Raio de Sabores", 
-        font=("Arial", 50),
+        font=("", 40),
         bg= "Green"
     )
     cabecalho.pack()
 
-    acoes = tk.Button(MenuDaPizzaria, text="Fazer Pedido", command=abrir_cardapio,
-    pady=60,
-    padx=80,
-    fg="White", bg="Red").pack()
+    cadastrar_Cliente = tk.Button(MenuDaPizzaria,
+     text="Cadastrar-se",
+     bg= "red",
+     pady= 10,
+     font=("", 20)).pack()
 
     MenuDaPizzaria.mainloop()
-
-def abrir_cardapio():
-    Cardapio = tk.Toplevel()
-    Cardapio.title("Cardápio")
-    Cardapio.minsize(480, 700)
-  
-    Cardapio.mainloop()
 
 if __name__ == "__main__":
    main()
