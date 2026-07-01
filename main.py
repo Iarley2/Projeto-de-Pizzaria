@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 
+from Funções.Abrir_cadastro import abrir_cadastro
+
 def main():
     MenuDaPizzaria = tk.Tk()
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
@@ -22,7 +24,8 @@ def main():
 
     cadastrar_Cliente = tk.Button(ações, #Botão de cadastrar
       text="Cadastrar-se",
-      font=("", 30)).pack()
+      font=("", 30),
+      command= abrir_cadastro).pack()
     
     abrir_cardápio = tk.Button(ações,
      text="Abrir cardápio \n (Se já posssui cadastro)",

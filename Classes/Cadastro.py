@@ -1,10 +1,9 @@
 Cadastros = {}
 
 class Cadastro:
-    def __init__(self, nome, senha, endereco):
+    def __init__(self, nome, senha):
         self.nome = nome
         self.senha = int(senha)
-        self.endereco = endereco
 
     def cadastrar(self):
         if len(Cadastros) < 6:
