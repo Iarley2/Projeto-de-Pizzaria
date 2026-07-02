@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from Funções.Abrir_cadastro import abrir_cadastro
+from Classes.Cliente import Cadastros
 
 def main():
     MenuDaPizzaria = tk.Tk()
@@ -25,12 +26,9 @@ def main():
     cadastrar_Cliente = tk.Button(ações, #Botão de cadastrar
       text="Cadastrar-se",
       font=("", 30),
-      command= abrir_cadastro).pack()
+      command= abrir_cadastro)
+    cadastrar_Cliente.pack()
     
-    abrir_cardápio = tk.Button(ações,
-     text="Abrir cardápio \n (Se já posssui cadastro)",
-     font=("", 30)).pack()
-
     MenuDaPizzaria.mainloop()
         
 

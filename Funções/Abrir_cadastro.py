@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes import Cadastro, Cadastros
+from Classes.Cliente import Cadastros, Cadastro
+
 
 def abrir_cadastro():
     cadastro = tk.Toplevel()
@@ -34,8 +35,12 @@ def abrir_cadastro():
      cliente = Cadastro(pessoa, endereco)
      cliente.cadastrar()
 
-     for i in Cadastros:
-        print(i)
+     print(Cadastros)
+
+     abrir_cardápio = tk.Button(ações,
+     text="Abrir cardápio",
+     font=("", 15)).pack()
+
 
     ações = ttk.Frame(cadastro, padding=20)
     ações.pack()
