@@ -15,7 +15,7 @@ def main():
     cabecalho = ttk.Label( #Criação do título do menu
         inicio,
         text="Pizzaria Raio de Sabores",
-        font=("", 30)
+        font=("", 30, "bold")
     )
     cabecalho.pack()
 
@@ -24,14 +24,14 @@ def main():
 
     cadastrar_Cliente = tk.Button(ações, #Botão de cadastrar
       text="Fazer meu pedido",
-      font=("", 30),
+      font=("", 30, "bold"),
       command= abrir_cadastro,
       bg="red")
     cadastrar_Cliente.pack()
 
     abrir_pizzas = tk.Button(ações,
      text= "Ver menu de sabores",
-     font= ("", 30), 
+     font= ("", 30, "bold"), 
      command= abrir_menu,
      bg= "Green")
     abrir_pizzas.pack()
