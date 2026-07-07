@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-
 from Funções.Abrir_cadastro import abrir_cadastro
-from Classes.Cliente import Cadastros
 
 def main():
     MenuDaPizzaria = tk.Tk()
