@@ -5,4 +5,11 @@ class Pizza:
         self.valor_inicial = valor_inicial
         self.acompanhamentos = acompanhamentos
 
-calabresa = Pizza("Calabresa", ["Calabresa", "Queijo", "Tomate"], 40, ["Bacon", "Cogumelos"])
+    def mostrar_ingredientes(self):
+        for i in self.ingredientes:
+            return f"Ingredientes: {i}"
+calabresa = Pizza("Calabresa",
+ ["Calabresa", "Queijo", "Tomate"],
+ 40,
+ ["Bacon", "Cogumelos"])
+
