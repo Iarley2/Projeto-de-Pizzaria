@@ -1,7 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 
+cliques = None 
+
 def abrir_cardapio():
+    global cliques
+
     cardapio = tk.Toplevel()
     cardapio.title("Cardápio")
     cardapio.geometry("800x600")
@@ -12,4 +16,6 @@ def abrir_cardapio():
     titulo = ttk.Label(titulo,
      text="Cardápio",
      font=("",20, "bold"))
+    
+
     

@@ -1,8 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 
-from Classes.Cliente import Cliente
+from Classes.Cliente import Pessoa
 from Funções.Abrir_cardapio import abrir_cardapio
+
+from Funções.cliques import contar_cliques
+
+Cliques = 0
 
 def abrir_cadastro():
     cadastro = tk.Toplevel()
@@ -33,17 +37,24 @@ def abrir_cadastro():
     botoes.pack()
 
     def salvar():
+     
+     global Cliques
+
      pessoa = entrada_nome.get()
      endereco = entrada_endereco.get()
 
-     cliente = Cliente(pessoa, endereco)
+     cliente = Pessoa(pessoa, endereco)
      cliente.cadastrar()
+     Cliques += 1
 
      botão_de_cardápio = tk.Button(botoes,
      text="Abrir cardápio",
      font=("", 15),
      command = abrir_cardapio)
+     contar_cliques(1, cadastro)
      botão_de_cardápio.pack()
+
+
 
     botao_de_cadastro = tk.Button(botoes,
      text="Cadastrar",
