@@ -28,12 +28,8 @@ def abrir_cadastro():
     entrada_endereco = tk.Entry(campos_para_digitar, font=("", 15))
     entrada_endereco.pack()
 
-    botoes = ttk.Frame(cadastro, padding= 20, border= 4)
-
-    botao_de_cadastro = tk.Button(botoes,
-     text="Cadastrar",
-     font=("", 20),
-     bg="red")
+    botoes = ttk.Frame(cadastro, padding= 20)
+    botoes.pack()
 
     def salvar():
      pessoa = entrada_nome.get()
@@ -47,4 +43,11 @@ def abrir_cadastro():
      font=("", 15),
      command= abrir_cardapio)
      botão_de_cardápio.pack()
+
+    botao_de_cadastro = tk.Button(botoes,
+     text="Cadastrar",
+     font=("", 20),
+     command= salvar,
+     bg="red")
+    botao_de_cadastro.pack()
 

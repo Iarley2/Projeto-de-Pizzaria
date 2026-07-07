@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from Funções.Abrir_cadastro import abrir_cadastro
+from Funções.Abrir_menu_de_sabores import abrir_menu
 
 def main():
     MenuDaPizzaria = tk.Tk()
@@ -22,10 +23,18 @@ def main():
     ações.pack(fill="x")
 
     cadastrar_Cliente = tk.Button(ações, #Botão de cadastrar
-      text="Cadastrar-se",
+      text="Fazer meu pedido",
       font=("", 30),
-      command= abrir_cadastro)
+      command= abrir_cadastro,
+      bg="red")
     cadastrar_Cliente.pack()
+
+    abrir_pizzas = tk.Button(ações,
+     text= "Ver menu de sabores",
+     font= ("", 30), 
+     command= abrir_menu,
+     bg= "Green")
+    abrir_pizzas.pack()
     
     MenuDaPizzaria.mainloop()
         
