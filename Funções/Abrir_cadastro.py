@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes import Cadastro, Cadastros
+from Classes import Cliente, Cadastros
 
 def abrir_cadastro():
     cadastro = tk.Toplevel()
@@ -31,7 +31,7 @@ def abrir_cadastro():
      pessoa = entrada_nome.get()
      endereco = entrada_endereco.get()
 
-     cliente = Cadastro(pessoa, endereco)
+     cliente = Cliente(pessoa, endereco)
      cliente.cadastrar()
 
      for i in Cadastros:
