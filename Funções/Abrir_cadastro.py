@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes import Cliente
+
+from Classes.Cliente import Cliente
 from Funções.Abrir_cardapio import abrir_cardapio
 
 def abrir_cadastro():
@@ -41,7 +42,7 @@ def abrir_cadastro():
      botão_de_cardápio = tk.Button(botoes,
      text="Abrir cardápio",
      font=("", 15),
-     command= abrir_cardapio)
+     command = abrir_cardapio)
      botão_de_cardápio.pack()
 
     botao_de_cadastro = tk.Button(botoes,

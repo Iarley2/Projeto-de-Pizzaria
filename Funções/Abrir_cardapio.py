@@ -7,7 +7,9 @@ def abrir_cardapio():
     cardapio.geometry("800x600")
     cardapio.minsize(400, 300)
 
-    titulo= ttk.Frame(cardapio, padding=30)
-    titulo.pack()
-    mensagem2= ttk.Label(titulo, text="Cardápio", font=("",20) ).pack()
+    inicio = ttk.Frame(cardapio, padding=30)
+    inicio.pack()
+    titulo = ttk.Label(titulo,
+     text="Cardápio",
+     font=("",20, "bold"))
     
