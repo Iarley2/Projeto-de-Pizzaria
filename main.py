@@ -15,7 +15,7 @@ def main():
     cabecalho = ttk.Label( #Criação do título do menu
         inicio,
         text="Pizzaria Raio de Sabores",
-        font=("", 30, "bold")
+        font=("", 30, "bold", "italic")
     )
     cabecalho.pack()
 

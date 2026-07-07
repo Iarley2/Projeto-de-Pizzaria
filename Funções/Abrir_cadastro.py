@@ -10,7 +10,7 @@ Cliques = 0
 
 def abrir_cadastro():
     cadastro = tk.Toplevel()
-    cadastro.title("Cadastro")
+    cadastro.title("Pedido")
     cadastro.geometry("800x600")
     cadastro.minsize(400, 300)
 
@@ -18,7 +18,7 @@ def abrir_cadastro():
     titulo.pack()
 
     texto = ttk.Label(titulo,
-     text="Cadastro", font= ("", 20)).pack()
+     text="Pedido", font= ("", 20, "bold", "italic")).pack()
     
     campos_para_digitar = ttk.Frame(cadastro, padding=20)
     campos_para_digitar.pack()
@@ -47,18 +47,22 @@ def abrir_cadastro():
      cliente.cadastrar()
      Cliques += 1
 
-     botão_de_cardápio = tk.Button(botoes,
-     text="Abrir cardápio",
-     font=("", 15),
-     command = abrir_cardapio)
+     cardapio = tk.Toplevel()
+     cardapio.title("Cardápio")
+     cardapio.geometry("800x600")
+     cardapio.minsize(400, 300)
+
+     inicio = ttk.Frame(cardapio, padding=30)
+     inicio.pack()
+     titulo = ttk.Label(inicio,
+     text="Cardápio",
+     font=("",20, "bold"))
+
      contar_cliques(1, cadastro)
-     botão_de_cardápio.pack()
-
-
 
     botao_de_cadastro = tk.Button(botoes,
-     text="Cadastrar",
-     font=("", 20),
+     text="Escolher Pizza",
+     font=("", 20, "bold"),
      command= salvar,
      bg="red")
     botao_de_cadastro.pack()
