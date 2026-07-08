@@ -31,7 +31,7 @@ def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
      frame.pack()
 
      nome = ttk.Label(frame,
-        text=f"Sabor: {pizza.sabor}\n Acompanhamentos{pizza.mostrar_ingredientes()} \n Preço R$: {pizza.valor_inicial}",
+        text=f"Sabor: {pizza.sabor}\n {pizza.mostrar_ingredientes()} \n Preço R$: {pizza.valor_inicial}",
         font=("", 20, "bold", "italic"))
      nome.pack()
 

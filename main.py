@@ -7,10 +7,10 @@ def main():
     MenuDaPizzaria = tk.Tk()
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
     MenuDaPizzaria.geometry("800x600")
-    MenuDaPizzaria.minsize()
+    MenuDaPizzaria.minsize(400, 300)
 
     inicio = ttk.Frame(MenuDaPizzaria, padding=30)
-    inicio.pack(fill="x")
+    inicio.pack()
 
     cabecalho = ttk.Label( #Criação do título do menu
         inicio,
@@ -26,6 +26,8 @@ def main():
       text="Fazer meu pedido",
       font=("", 30, "bold"),
       command= abrir_cadastro,
+      bd= 10,
+      relief= "sunken",
       bg="red")
     cadastrar_Cliente.pack()
 
@@ -33,6 +35,8 @@ def main():
      text= "Ver menu de sabores",
      font= ("", 30, "bold"), 
      command= abrir_menu,
+     bd= 10,
+     relief= "sunken",
      bg= "Green")
     abrir_pizzas.pack()
     
