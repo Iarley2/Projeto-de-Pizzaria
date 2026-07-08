@@ -46,18 +46,8 @@ def abrir_cadastro():
      cliente = Pessoa(pessoa, endereco)
      cliente.cadastrar()
      Cliques += 1
-
-     cardapio = tk.Toplevel()
-     cardapio.title("Cardápio")
-     cardapio.geometry("800x600")
-     cardapio.minsize(400, 300)
-
-     inicio = ttk.Frame(cardapio, padding=30)
-     inicio.pack()
-     titulo = ttk.Label(inicio,
-     text="Cardápio",
-     font=("",20, "bold"))
-
+     
+     abrir_cardapio()
      contar_cliques(1, cadastro)
 
     botao_de_cadastro = tk.Button(botoes,

@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from Classes.pizza import Pizza, calabresa
 
+
 def abrir_menu():
     Menu = tk.Toplevel()
     Menu.title("Menu de Sabores")
@@ -21,10 +22,10 @@ def abrir_menu():
     label = tk.Label(pizza_de_calabresa, image = ImagemCalabresa, bd= 4, relief= "sunken")
     label.image = ImagemCalabresa
     label.pack()"""
+    criar_pizza(Menu, calabresa, "Imagens/Calabresa.png")
 
-    
 
-    def criar_pizza(janela, pizza, imagem):
+def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
      frame = ttk.Frame(janela, padding=20)
      frame.pack()
 
@@ -39,10 +40,7 @@ def abrir_menu():
      label = tk.Label(frame, image=foto, bd=4, relief="sunken")
      label.image = foto
      label.pack()
-    
-    ImagemCalabresa = tk.PhotoImage(file= "Imagens/Calabresa.png")
-    ImagemCalabresa = ImagemCalabresa.subsample(3,3)
+     
 
-    criar_pizza(Menu, calabresa, "Imagens/Calabresa.png")
 
     

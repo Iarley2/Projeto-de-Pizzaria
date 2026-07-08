@@ -1,11 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
-
-cliques = None 
+from Classes.pizza import Pizza
+from Funções.Abrir_menu_de_sabores import criar_pizza
+from Classes.pizza import calabresa
+import Imagens
 
 def abrir_cardapio():
-    global cliques
-
     cardapio = tk.Toplevel()
     cardapio.title("Cardápio")
     cardapio.geometry("800x600")
@@ -13,9 +13,21 @@ def abrir_cardapio():
 
     inicio = ttk.Frame(cardapio, padding=30)
     inicio.pack()
-    titulo = ttk.Label(titulo,
+    titulo = ttk.Label(inicio,
      text="Cardápio",
-     font=("",20, "bold"))
+     font=("", 20, "bold", "italic"))
+    titulo.pack()
+
+    #Primeira pizza
+
+    criar_pizza(cardapio, calabresa, "Calabresa.png")
+
+
+
+
+
+
+
     
 
     

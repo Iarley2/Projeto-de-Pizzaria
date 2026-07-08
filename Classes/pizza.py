@@ -8,6 +8,7 @@ class Pizza:
     def mostrar_ingredientes(self):
         for i in self.ingredientes:
             return f"Ingredientes: {i}"
+        
 calabresa = Pizza("Calabresa",
  ["Calabresa", "Queijo", "Tomate"],
  40,
