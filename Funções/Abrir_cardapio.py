@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from Classes.pizza import Pizza
 from Funções.Abrir_menu_de_sabores import criar_pizza
-from Classes.pizza import calabresa
+from Classes.pizza import calabresa, frango
 import Imagens
 
 def abrir_cardapio():
@@ -15,12 +15,13 @@ def abrir_cardapio():
     inicio.pack()
     titulo = ttk.Label(inicio,
      text="Cardápio",
-     font=("", 20, "bold", "italic"))
+     font=("", 30, "bold", "italic"))
     titulo.pack()
 
     #Primeira pizza
 
-    criar_pizza(cardapio, calabresa, "Calabresa.png")
+    criar_pizza(cardapio, calabresa, "Imagens/Calabresa.png")
+    criar_pizza(cardapio, frango, "Imagens/Frango.png")
 
 
 

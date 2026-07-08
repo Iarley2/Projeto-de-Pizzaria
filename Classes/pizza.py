@@ -10,7 +10,13 @@ class Pizza:
             return f"Ingredientes: {i}"
         
 calabresa = Pizza("Calabresa",
- ["Calabresa", "Queijo", "Tomate"],
- 40,
- ["Bacon", "Cogumelos"])
+ ["Calabresa", "Queijo", "Tomate", "Cebola", "Orégano", "Azeitona"],
+ 40.00,
+ ["Bacon", "Batata Palha", "Ketchup", "Maionese", "Mostarda"])
+
+frango = Pizza("Frango", ["Queijo", "Catupiri", "Tomate", "Cebola"],
+ 40.00, 
+ ["Bacon", "Batata Palha", "Ketchup", "Maionese", "Mostarda"])
+
+
 

@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes.pizza import Pizza, calabresa
+from Classes.pizza import Pizza, calabresa, frango
 
 
 def abrir_menu():
@@ -23,6 +23,7 @@ def abrir_menu():
     label.image = ImagemCalabresa
     label.pack()"""
     criar_pizza(Menu, calabresa, "Imagens/Calabresa.png")
+    criar_pizza(Menu, frango, "Imagens/Frango.png")
 
 
 def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
@@ -31,7 +32,7 @@ def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
 
      nome = ttk.Label(frame,
         text=f"Sabor: {pizza.sabor}\n{pizza.mostrar_ingredientes()}",
-        font=("", 20))
+        font=("", 20, "bold", "italic"))
      nome.pack()
 
      foto = tk.PhotoImage(file=imagem)
