@@ -13,17 +13,13 @@ def abrir_cadastro():
     cadastro.geometry("800x600")
     cadastro.minsize(400, 300)
 
-    titulo = ttk.Frame(cadastro, padding= 20)
     titulo.pack()
 
     texto = ttk.Label(titulo,
      text="Pedido", font= ("", 20, "bold", "italic")).pack()
     
-    campos_para_digitar = ttk.Frame(cadastro, padding=20)
     campos_para_digitar.pack()
 
-    nome = ttk.Label(campos_para_digitar, text="Nome:", font=("", 25))
-    nome.pack()
     entrada_nome = tk.Entry(campos_para_digitar, font=("", 15))
     entrada_nome.pack()
 
