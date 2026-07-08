@@ -6,21 +6,24 @@ from Funções.Abrir_menu_de_sabores import abrir_menu
 def main():
     MenuDaPizzaria = tk.Tk()
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
-    MenuDaPizzaria.geometry("800x600")
+    MenuDaPizzaria.geometry("800x800")
     MenuDaPizzaria.minsize(400, 300)
+    MenuDaPizzaria.configure(bg= "Brown")
 
-    inicio = ttk.Frame(MenuDaPizzaria, padding=30)
-    inicio.pack()
+    inicio = tk.Frame(MenuDaPizzaria, bg="Brown", width= 100, height= 100)
+    inicio.pack(pady= 20)
 
-    cabecalho = ttk.Label( #Criação do título do menu
+    cabecalho = tk.Label( #Criação do título do menu
         inicio,
         text="Pizzaria Raio de Sabores",
-        font=("", 30, "bold", "italic")
+        font=("", 30, "bold", "italic"), 
+        bd= 10, 
+        relief= 'sunken'
     )
     cabecalho.pack()
 
-    ações = ttk.Frame(MenuDaPizzaria, padding=20)
-    ações.pack(fill="x")
+    ações = tk.Frame(MenuDaPizzaria, bg="Brown", width= 100, height= 100, bd=10, relief="sunken")
+    ações.pack(fill="x", pady= 80)
 
     cadastrar_Cliente = tk.Button(ações, #Botão de cadastrar
       text="Fazer meu pedido",
@@ -29,7 +32,7 @@ def main():
       bd= 10,
       relief= "sunken",
       bg="red")
-    cadastrar_Cliente.pack()
+    cadastrar_Cliente.pack(pady=50)
 
     abrir_pizzas = tk.Button(ações,
      text= "Ver menu de sabores",
@@ -38,7 +41,7 @@ def main():
      bd= 10,
      relief= "sunken",
      bg= "Green")
-    abrir_pizzas.pack()
+    abrir_pizzas.pack(pady=50)
     
     MenuDaPizzaria.mainloop()
         

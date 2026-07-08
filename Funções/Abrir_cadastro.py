@@ -1,14 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 
-from Classes.Cliente import Pessoa
 from Funções.Abrir_cardapio import abrir_cardapio
-
 from Funções.cliques import contar_cliques
 
 Cliques = 0
 
 def abrir_cadastro():
+
     cadastro = tk.Toplevel()
     cadastro.title("Pedido")
     cadastro.geometry("800x600")
@@ -35,6 +34,16 @@ def abrir_cadastro():
 
     botoes = ttk.Frame(cadastro, padding= 20)
     botoes.pack()
+
+    class Pessoa:
+     def __init__(self, nome, endereco):
+        self.nome = nome
+        self.endereco = endereco
+
+     def cadastrar(self):
+        with open("Pedidos.txt", "a") as pedido:
+           pedido.write(f"\nNome: {self.nome} | Endereço: {self.endereco} | Escolha: ")
+ 
 
     def salvar():
      
