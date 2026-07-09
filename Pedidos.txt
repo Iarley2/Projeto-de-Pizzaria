@@ -1,2 +1,4 @@
 ------------------------PEDIDOS CADASTRADOS---------------------------
-Nome:  | Endereço:  | Escolha: 
+Nome: .!toplevel.!frame2.!label | Endereço: .!toplevel.!frame2.!label2 | Escolha: Frango
+Nome: arlye | Endereço: .!toplevel.!frame2.!label2 | Escolha: Calabresa
+Nome: Iarley | Endereço: Rua A | Escolha: Frango

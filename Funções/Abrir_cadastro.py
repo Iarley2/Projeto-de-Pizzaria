@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-
-from Funções.Abrir_cardapio import abrir_cardapio, escolha
+from Classes.Cliente import Pessoa
+from Funções.Abrir_cardapio import abrir_cardapio
 from Funções.cliques import contar_cliques
 
 Cliques = 0
@@ -40,28 +40,17 @@ def abrir_cadastro():
     botoes = tk.Frame(cadastro, bg="Brown")
     botoes.pack()
 
-    class Pessoa:
-     def __init__(self, nome, endereco):
-        self.nome = nome
-        self.endereco = endereco
-
-     def cadastrar(self):
-        with open("Pedidos.txt", "a") as pedido:
-           pedido.write(f"\nNome: {self.nome} | Endereço: {self.endereco} | Escolha: ")
- 
-
     def salvar():
      
      global Cliques
 
      pessoa = entrada_nome.get()
-     endereco = entrada_endereco.get()
+     endereço = entrada_endereco.get()
 
-     cliente = Pessoa(pessoa, endereco)
-     cliente.cadastrar()
+     cliente = Pessoa(pessoa, endereço)
      Cliques += 1
      
-     abrir_cardapio()
+     abrir_cardapio(cliente)
      contar_cliques(1, cadastro)
 
     botao_de_cadastro = tk.Button(botoes,

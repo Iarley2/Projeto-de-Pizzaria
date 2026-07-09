@@ -2,14 +2,19 @@ import tkinter as tk
 from tkinter import ttk
 from Funções.Abrir_menu_de_sabores import criar_pizza
 from Classes.pizza import calabresa, frango
+from Classes.Cliente import Pessoa
 import Imagens
 
-def abrir_cardapio():
+def abrir_cardapio(cliente):
+
     cardapio = tk.Toplevel()
     cardapio.title("Cardápio")
-    cardapio.geometry("800x600")
+    cardapio.geometry("800x800")
     cardapio.minsize(400, 300)
     cardapio.configure(bg="Brown")
+
+    acoes = tk.Frame(cardapio, bg="Red")
+    acoes.pack(pady= 20)
 
     inicio = tk.Frame(cardapio)
     inicio.pack()
@@ -65,7 +70,26 @@ def abrir_cardapio():
      relief= "sunken",
      value="Frango").pack(padx= 200)
     
-    escolha = PizzaEscolhida.get()
+    #botão final
+    acoes = tk.Frame(cardapio,
+     bg= "Brown")
+    acoes.pack(pady= 20)
+
+    def finalizar_pedido():
+     escolha = PizzaEscolhida.get()
+     cliente.cadastrar(escolha)
+     cardapio.destroy()
+
+
+    finalizar = tk.Button(acoes,
+     text="Finalizar pedido",
+     bg= "Red", 
+     command = finalizar_pedido, 
+     font= ("", 20, "bold"), 
+     bd= 10, 
+     relief= "sunken")
+    finalizar.pack(pady= 20)
+    
 
 
 
