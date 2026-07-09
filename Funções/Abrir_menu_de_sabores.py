@@ -8,6 +8,7 @@ def abrir_menu():
     Menu.title("Menu de Sabores")
     Menu.geometry("800x600")
     Menu.minsize(400, 300)
+    Menu.configure(bg= "Brown",  bd= 10, relief="sunken")
 
     """pizza_de_calabresa = ttk.Frame(Menu, padding= 20)
     pizza_de_calabresa.pack()
@@ -27,12 +28,14 @@ def abrir_menu():
 
 
 def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
-     frame = ttk.Frame(janela, padding=20)
-     frame.pack()
+     frame = tk.Frame(janela, bd= 10, relief="sunken", bg= "Red")
+     frame.pack(pady= 10)
 
-     nome = ttk.Label(frame,
+     nome = tk.Label(frame,
         text=f"Sabor: {pizza.sabor}\n {pizza.mostrar_ingredientes()} \n Preço R$: {pizza.valor_inicial}",
-        font=("", 20, "bold", "italic"))
+        font=("", 20, "bold", "italic"), 
+        bd= 4, 
+        relief= "sunken")
      nome.pack()
 
      foto = tk.PhotoImage(file=imagem)

@@ -12,7 +12,7 @@ def abrir_cardapio(cliente):
     cardapio.title("Cardápio")
     cardapio.geometry("800x800")
     cardapio.minsize(400, 300)
-    cardapio.configure(bg="Brown")
+    cardapio.configure(bg="Brown",  bd= 10, relief="sunken")
 
     acoes = tk.Frame(cardapio, bg="Red")
     acoes.pack(pady= 20)

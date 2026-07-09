@@ -12,7 +12,7 @@ def abrir_cadastro():
     cadastro.title("Pedido")
     cadastro.geometry("800x600")
     cadastro.minsize(400, 300)
-    cadastro.configure(bg="Brown")
+    cadastro.configure(bg="Brown", bd= 10, relief="sunken")
 
     titulo = tk.Frame(cadastro, bd= 4, relief="sunken", bg="Brown")
     titulo.pack(pady= 20)
