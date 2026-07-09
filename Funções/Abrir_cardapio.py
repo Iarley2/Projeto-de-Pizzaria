@@ -27,10 +27,17 @@ def abrir_cardapio():
      relief= "sunken")
     FrameCalabresa.pack()
 
-    imagem_calabresa = cardapio.imagem_calabresa = tk.PhotoImage(file="Imagens/Calabresa.png")
-    cardapio.imagem_calabresa = cardapio.imagem_calabresa.subsample(3, 3)
+    FrameFrango = tk.Frame(cardapio,
+     bg="Green",
+     width= 100,
+     height= 100,
+     bd= 8,
+     relief= "sunken")
+    FrameFrango.pack()
 
     #Radiobuttons
+    imagem_calabresa = cardapio.imagem_calabresa = tk.PhotoImage(file="Imagens/Calabresa.png")
+    cardapio.imagem_calabresa = cardapio.imagem_calabresa.subsample(3, 3)
 
     PizzaEscolhida = tk.StringVar(value="")
     tk.Radiobutton(FrameCalabresa,
@@ -43,6 +50,21 @@ def abrir_cardapio():
      bd= 8, 
      relief= "sunken",
      value="Calabresa").pack(padx= 200)
+    
+    imagem_frango = cardapio.imagem_frango = tk.PhotoImage(file= "Imagens/Frango.png")
+    cardapio.imagem_frango = cardapio.imagem_frango.subsample(3, 3)
+
+    tk.Radiobutton(FrameFrango,
+     text=f"{frango.sabor}\n{frango.valor_inicial}",
+     variable=PizzaEscolhida,
+     image=cardapio.imagem_frango,
+     compound= "right",
+     font= ("", 20, "bold"),
+     bg= "red",
+     bd= 8, 
+     relief= "sunken",
+     value="Frango").pack(padx= 200)
+    
     escolha = PizzaEscolhida.get()
 
 

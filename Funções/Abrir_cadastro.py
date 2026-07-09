@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-from Funções.Abrir_cardapio import abrir_cardapio
+from Funções.Abrir_cardapio import abrir_cardapio, escolha
 from Funções.cliques import contar_cliques
 
 Cliques = 0
