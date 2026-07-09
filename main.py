@@ -8,7 +8,7 @@ def main():
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
     MenuDaPizzaria.geometry("800x800")
     MenuDaPizzaria.minsize(400, 300)
-    MenuDaPizzaria.configure(bg= "Brown")
+    MenuDaPizzaria.configure(bg= "Brown", bd= 10, relief= "sunken")
 
     inicio = tk.Frame(MenuDaPizzaria, bg="Brown", width= 100, height= 100)
     inicio.pack(pady= 20)
