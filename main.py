@@ -9,9 +9,14 @@ def main():
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
     MenuDaPizzaria.geometry("800x800")
     MenuDaPizzaria.minsize(400, 300)
-    MenuDaPizzaria.configure(bg= "Brown", bd= 10, relief= "sunken")
+    MenuDaPizzaria.configure(bg= "Brown", 
+      bd= 10, 
+      relief= "sunken")
     
-    inicio = tk.Frame(MenuDaPizzaria, bg="Brown", width= 100, height= 100)
+    inicio = tk.Frame(MenuDaPizzaria, 
+     bg="Brown", 
+     width= 100, 
+     height= 100)
     inicio.pack(pady= 20)
 
     cabecalho = tk.Label( #Criação do título do menu
@@ -23,7 +28,12 @@ def main():
     )
     cabecalho.pack()
 
-    ações = tk.Frame(MenuDaPizzaria, bg="Brown", width= 100, height= 100, bd=10, relief="sunken")
+    ações = tk.Frame(MenuDaPizzaria,
+     bg="Brown",
+     width= 100, 
+     height= 100, 
+     bd=10, 
+     relief="sunken")
     ações.pack(fill="x", pady= 80)
 
     cadastrar_Cliente = tk.Button(ações, #Botão de cadastrar

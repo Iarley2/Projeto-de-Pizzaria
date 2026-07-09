@@ -81,7 +81,7 @@ def abrir_cardapio(cliente):
      cliente.cadastrar(escolha)
 
      messagebox.showinfo(
-        "Resumo do pedido:", 
+        "Pedido registrado \n com sucesso!", 
         f"Cliente: {cliente.nome}\n"
         f"Endereço: {cliente.endereco}\n"
         f"Escolha: {escolha}"

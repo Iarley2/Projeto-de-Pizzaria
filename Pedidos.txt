@@ -1,4 +1,1 @@
 ------------------------PEDIDOS CADASTRADOS---------------------------
-
-Nome: Iarley | Endereço: Rua A | Escolha: Calabresa
-Nome: iarley | Endereço: Rua A | Escolha: Frango

@@ -5,4 +5,4 @@ class Pessoa:
 
      def cadastrar(self, escolha):
         with open("Pedidos.txt", "a") as pedido:
-           pedido.write(f"\nNome: {self.nome} | Endereço: {self.endereco} | Escolha: {escolha}")
+           pedido.write(f"\nNome: {self.nome} | Endereco: {self.endereco} | Escolha: {escolha}")
