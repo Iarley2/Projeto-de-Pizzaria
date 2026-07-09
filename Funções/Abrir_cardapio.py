@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 from Funções.Abrir_menu_de_sabores import criar_pizza
 from Classes.pizza import calabresa, frango
 from Classes.Cliente import Pessoa
@@ -78,6 +79,13 @@ def abrir_cardapio(cliente):
     def finalizar_pedido():
      escolha = PizzaEscolhida.get()
      cliente.cadastrar(escolha)
+
+     messagebox.showinfo(
+        "Resumo do pedido:", 
+        f"Cliente: {cliente.nome}\n"
+        f"Endereço: {cliente.endereco}\n"
+        f"Escolha: {escolha}"
+     )
      cardapio.destroy()
 
 
