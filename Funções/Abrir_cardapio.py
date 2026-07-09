@@ -31,6 +31,7 @@ def abrir_cardapio():
     cardapio.imagem_calabresa = cardapio.imagem_calabresa.subsample(3, 3)
 
     #Radiobuttons
+
     PizzaEscolhida = tk.StringVar(value="")
     tk.Radiobutton(FrameCalabresa,
      text=f"{calabresa.sabor}\n{calabresa.valor_inicial}",
@@ -42,6 +43,7 @@ def abrir_cardapio():
      bd= 8, 
      relief= "sunken",
      value="Calabresa").pack(padx= 200)
+    escolha = PizzaEscolhida.get()
 
 
 
