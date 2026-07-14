@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from Funções.Abrir_menu_de_sabores import criar_pizza
-from Classes.pizza import calabresa, frango, queijo, portuguesa
+from Classes.pizza import calabresa, frango, queijo, portuguesa, margherita, napolitana
 from Classes.Cliente import Pessoa
 import Imagens
 
@@ -73,6 +73,30 @@ def abrir_cardapio(cliente):
      relief= "sunken")
     FramePortuguesa.pack(fill= "x")
 
+    FrameQueijo = tk.Frame(conteudo,
+        bg="Red",
+        width= 100,
+        height= 100,
+        bd= 8,
+        relief= "sunken")
+    FrameQueijo.pack(fill= "x")
+
+    FrameMargherita = tk.Frame(conteudo,
+        bg="Red",
+        width= 100,
+        height= 100,
+        bd= 8,
+        relief= "sunken")
+    FrameMargherita.pack(fill= "x") 
+
+    FrameNapolitana = tk.Frame(conteudo,
+        bg="Red",
+        width= 100,
+        height= 100,
+        bd= 8,
+        relief= "sunken")
+    FrameNapolitana.pack(fill= "x")
+
     #Radiobuttons
     imagem_calabresa = cardapio.imagem_calabresa = tk.PhotoImage(file="Imagens/Calabresa.png")
     cardapio.imagem_calabresa = cardapio.imagem_calabresa.subsample(3, 3)
@@ -82,6 +106,15 @@ def abrir_cardapio(cliente):
 
     imagem_portuguesa = cardapio.imagem_portuguesa = tk.PhotoImage(file= "Imagens/Portuguesa.png")
     cardapio.imagem_portuguesa = cardapio.imagem_portuguesa.subsample(3, 3)
+
+    imagem_queijo = cardapio.imagem_queijo = tk.PhotoImage(file= "Imagens/Queijo.png")
+    cardapio.imagem_queijo = cardapio.imagem_queijo.subsample(3, 3)
+
+    imagem_margherita = cardapio.imagem_margherita = tk.PhotoImage(file= "Imagens/Margherita.png")
+    cardapio.imagem_margherita = cardapio.imagem_margherita.subsample(3, 3)
+
+    imagem_napolitana = cardapio.imagem_napolitana = tk.PhotoImage(file= "Imagens/Napolitana.png")
+    cardapio.imagem_napolitana = cardapio.imagem_napolitana.subsample(3, 3)
 
     PizzaEscolhida = tk.StringVar(value="")
     tk.Radiobutton(FrameCalabresa,
@@ -117,6 +150,40 @@ def abrir_cardapio(cliente):
      bd= 8, 
      relief= "sunken",
      value="Portuguesa").pack(padx= 200)
+    
+    tk.Radiobutton(FrameQueijo,
+     text=f"{queijo.sabor}\n{queijo.valor_inicial}",
+        variable=PizzaEscolhida,
+        image=cardapio.imagem_queijo,
+        compound= "right",
+        font= ("", 20, "bold"),
+        bg= "red",
+        bd= 8,
+        relief= "sunken",
+        value="Queijo").pack(padx= 200)
+    
+    tk.Radiobutton(FrameMargherita,
+     text=f"{margherita.sabor}\n{margherita.valor_inicial}",    
+        variable=PizzaEscolhida,
+        image=cardapio.imagem_margherita,
+        compound= "right",
+        font= ("", 20, "bold"),
+        bg= "red",
+        bd= 8,
+        relief= "sunken",
+        value="Margherita").pack(padx= 200)
+    
+    tk.Radiobutton(FrameNapolitana,
+     text=f"{napolitana.sabor}\n{napolitana.valor_inicial}",    
+        variable=PizzaEscolhida,
+        image=cardapio.imagem_napolitana,
+        compound= "right",
+        font= ("", 20, "bold"),
+        bg= "red",
+        bd= 8,
+        relief= "sunken",
+        value="Napolitana").pack(padx= 200)
+    
 
     
     #botão final
