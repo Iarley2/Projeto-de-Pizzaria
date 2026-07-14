@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes.pizza import Pizza, calabresa, frango, queijo
+from Classes.pizza import Pizza, calabresa, frango, queijo, portuguesa
 
 
 def abrir_menu():
