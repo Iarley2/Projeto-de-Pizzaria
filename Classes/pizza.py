@@ -20,5 +20,8 @@ frango = Pizza("Frango", ["Queijo", "Catupiri", "Tomate", "Cebola"],
 
 queijo = Pizza("Queijo", ["Queijo, Orégano, "], 40.00, [])
 
+portuguesa = Pizza("portuguesa", ["Queijo", "Presunto", "Tomste", "Cebola", "Ovo", "Azeitona", "Orégano"], 50.00,[])
+
+
 
 

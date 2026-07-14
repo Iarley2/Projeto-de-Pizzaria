@@ -13,7 +13,7 @@ def abrir_menu():
     criar_pizza(Menu, calabresa, "Imagens/Calabresa.png")
     criar_pizza(Menu, frango, "Imagens/Frango.png")
     criar_pizza(Menu, queijo, "Imagens/Queijo.png")
-
+    criar_pizza(Menu, portuguesa, "Imagens/Portuguesa.png")
 
 def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
      frame = tk.Frame(janela, bd= 10, relief="sunken", bg= "Red")
