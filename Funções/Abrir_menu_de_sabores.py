@@ -10,16 +10,31 @@ def abrir_menu():
     Menu.minsize(400, 300)
     Menu.configure(bg= "Brown",  bd= 10, relief="sunken")
 
-    criar_pizza(Menu, calabresa, "Imagens/Calabresa.png")
-    criar_pizza(Menu, frango, "Imagens/Frango.png")
-    criar_pizza(Menu, queijo, "Imagens/Queijo.png")
-    criar_pizza(Menu, portuguesa, "Imagens/Portuguesa.png")
-    criar_pizza(Menu, margherita, "Imagens/Margherita.png")
-    criar_pizza(Menu, napolitana, "Imagens/Napolitana.png")
+    canvas = tk.Canvas(Menu, bg="Brown", highlightthickness=0)
+    canvas.pack(side="left", fill="both", expand=True)
+
+    scrollbar = ttk.Scrollbar(Menu, orient="vertical", command=canvas.yview)
+    scrollbar.pack(side="right", fill="y")
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    conteudo = tk.Frame(canvas, bg="Brown")
+    canvas.create_window((0, 0), window=conteudo, anchor="nw")
+
+    conteudo.bind(
+        "<Configure>",
+        lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+    )
+
+    criar_pizza(conteudo, calabresa, "Imagens/Calabresa.png")
+    criar_pizza(conteudo, frango, "Imagens/Frango.png")
+    criar_pizza(conteudo, queijo, "Imagens/Queijo.png")
+    criar_pizza(conteudo, portuguesa, "Imagens/Portuguesa.png")
+    criar_pizza(conteudo, margherita, "Imagens/Margherita.png")
+    criar_pizza(conteudo, napolitana, "Imagens/Napolitana.png")
 
 def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
      frame = tk.Frame(janela, bd= 10, relief="sunken", bg= "Red")
-     frame.pack(pady= 10)
+     frame.pack(fill="x")
 
      nome = tk.Label(frame,
         text=f"Sabor: {pizza.sabor}\n {pizza.mostrar_ingredientes()} \n Preço R$: {pizza.valor_inicial}",
