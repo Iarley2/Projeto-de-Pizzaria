@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from Classes.pizza import Pizza, calabresa, frango, queijo, portuguesa
+from Classes.pizza import Pizza, calabresa, frango, queijo, portuguesa, margherita, napolitana
 
 
 def abrir_menu():
@@ -14,6 +14,8 @@ def abrir_menu():
     criar_pizza(Menu, frango, "Imagens/Frango.png")
     criar_pizza(Menu, queijo, "Imagens/Queijo.png")
     criar_pizza(Menu, portuguesa, "Imagens/Portuguesa.png")
+    criar_pizza(Menu, margherita, "Imagens/Margherita.png")
+    criar_pizza(Menu, napolitana, "Imagens/Napolitana.png")
 
 def criar_pizza(janela, pizza, imagem): #Janela que fica | Pizza = objeto
      frame = tk.Frame(janela, bd= 10, relief="sunken", bg= "Red")
