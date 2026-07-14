@@ -13,6 +13,7 @@ def abrir_cardapio(cliente):
     cardapio.geometry("800x800")
     cardapio.minsize(400, 300)
     cardapio.configure(bg="Brown",  bd= 10, relief="sunken")
+<<<<<<< Updated upstream
 
     # Canvas
     canvas = tk.Canvas(cardapio, bg="Brown", highlightthickness=0)
@@ -35,6 +36,10 @@ def abrir_cardapio(cliente):
 )
 
     acoes = tk.Frame(conteudo, bg="Red")
+=======
+   
+    acoes = tk.Frame(cardapio, bg="Red")
+>>>>>>> Stashed changes
     acoes.pack(pady= 20)
 
     inicio = tk.Frame(conteudo)
