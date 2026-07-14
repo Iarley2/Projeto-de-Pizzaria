@@ -9,12 +9,12 @@ def main():
     MenuDaPizzaria.title("Pizzaria Raio de Sabores")
     MenuDaPizzaria.geometry("800x800")
     MenuDaPizzaria.minsize(400, 300)
-    MenuDaPizzaria.configure(bg= "Brown", 
+    MenuDaPizzaria.configure(bg= "Red", 
       bd= 10, 
       relief= "sunken")
     
     inicio = tk.Frame(MenuDaPizzaria, 
-     bg="Brown", 
+     bg="Red", 
      width= 100, 
      height= 100)
     inicio.pack(pady= 20)
@@ -29,7 +29,7 @@ def main():
     cabecalho.pack()
 
     ações = tk.Frame(MenuDaPizzaria,
-     bg="Brown",
+     bg="Green",
      width= 100, 
      height= 100, 
      bd=10, 
