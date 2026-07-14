@@ -16,7 +16,7 @@ def main():
     inicio = tk.Frame(MenuDaPizzaria, 
      bg="Brown", 
      width= 100, 
-     height= 100),
+     height= 100)
     inicio.pack(pady= 20)
 
     cabecalho = tk.Label( #Criação do título do menu
