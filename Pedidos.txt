@@ -1,7 +1,1 @@
 ------------------------PEDIDOS CADASTRADOS---------------------------
-Nome: Iarley  | Endereco: Rua A | Escolha: Frango
-Nome: s | Endereco: s | Escolha: Calabresa
-Nome: lucas | Endereco: ceará | Escolha: Calabresa
-Nome: Michele | Endereco: poço branco | Escolha: Frango
-Nome: jmejeud | Endereco: ddidi | Escolha: Calabresa
-Nome:  | Endereco:  | Escolha: Margherita
