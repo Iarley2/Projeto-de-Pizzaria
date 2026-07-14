@@ -22,6 +22,10 @@ queijo = Pizza("Queijo", ["Queijo, Orégano"], 40.00, [])
 
 portuguesa = Pizza("portuguesa", ["Queijo", "Presunto", "Tomste", "Cebola", "Ovo", "Azeitona", "Orégano"], 50.00,[])
 
+margherita = Pizza("Margherita", ["Queijo", "Tomate", "Manjericão", "Orégano"], 50.00, [])
+
+napolitana = Pizza("Napolitana", ["Queijo", "Tomate", "Alho", "Orégano"], 50.00, [])
+
 
 
 

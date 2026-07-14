@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from Funções.Abrir_menu_de_sabores import criar_pizza
-from Classes.pizza import calabresa, frango, queijo, portuguesa
+from Classes.pizza import calabresa, frango, queijo, portuguesa, margherita, napolitana
 from Classes.Cliente import Pessoa
 import Imagens
 
@@ -13,7 +13,6 @@ def abrir_cardapio(cliente):
     cardapio.geometry("800x800")
     cardapio.minsize(400, 300)
     cardapio.configure(bg="Brown",  bd= 10, relief="sunken")
-<<<<<<< Updated upstream
 
     # Canvas
     canvas = tk.Canvas(cardapio, bg="Brown", highlightthickness=0)
@@ -36,10 +35,10 @@ def abrir_cardapio(cliente):
 )
 
     acoes = tk.Frame(conteudo, bg="Red")
-=======
+
    
     acoes = tk.Frame(cardapio, bg="Red")
->>>>>>> Stashed changes
+     
     acoes.pack(pady= 20)
 
     inicio = tk.Frame(conteudo)
@@ -76,6 +75,23 @@ def abrir_cardapio(cliente):
      relief= "sunken")
     FramePortuguesa.pack(fill= "x")
 
+    FrameMargherita = tk.Frame(conteudo,
+    bg="red",
+    width= 100,
+    height= 100,
+    bd= 8,
+    relief= "sunken")
+    FrameMargherita.pack(fill= "x")
+
+    FrameNapolitana = tk.Frame(conteudo,
+    bg="red",
+    width= 100,
+    height= 100,
+    bd= 8,
+    relief= "sunken")
+    FrameNapolitana.pack(fill= "x")
+
+
     #Radiobuttons
     imagem_calabresa = cardapio.imagem_calabresa = tk.PhotoImage(file="Imagens/Calabresa.png")
     cardapio.imagem_calabresa = cardapio.imagem_calabresa.subsample(3, 3)
@@ -85,6 +101,12 @@ def abrir_cardapio(cliente):
 
     imagem_portuguesa = cardapio.imagem_portuguesa = tk.PhotoImage(file= "Imagens/Portuguesa.png")
     cardapio.imagem_portuguesa = cardapio.imagem_portuguesa.subsample(3, 3)
+
+    imagem_margherita = cardapio.imagem_margherita = tk.PhotoImage(file= "Imagens/Margherita.png")
+    cardapio.imagem_margherita = cardapio.imagem_margherita.subsample(3, 3)
+
+    imagem_napolitana = cardapio.imagem_napolitana = tk.PhotoImage(file= "Imagens/Napolitana.png")
+    cardapio.imagem_napolitana = cardapio.imagem_napolitana.subsample(3, 3)
 
     PizzaEscolhida = tk.StringVar(value="")
     tk.Radiobutton(FrameCalabresa,
@@ -120,6 +142,20 @@ def abrir_cardapio(cliente):
      bd= 8, 
      relief= "sunken",
      value="Portuguesa").pack(padx= 200)
+    
+    tk.Radiobutton(FrameMargherita,
+     text=f"{margherita.sabor}\n{margherita.valor_inicial}",
+     variable=PizzaEscolhida,
+     image=cardapio.imagem_margherita,
+     compound= "right",
+     font= ("", 20, "bold"),
+     bg= "red",
+     bd= 8, 
+     relief= "sunken",
+     value="Margherita").pack(padx= 200)
+    
+    
+
 
     
     #botão final
