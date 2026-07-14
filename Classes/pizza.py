@@ -18,7 +18,7 @@ frango = Pizza("Frango", ["Queijo", "Catupiri", "Tomate", "Cebola"],
  40.00, 
  ["Bacon", "Batata Palha", "Ketchup", "Maionese", "Mostarda"])
 
-queijo = Pizza("Queijo", ["Queijo, Orégano, "], 40.00, [])
+queijo = Pizza("Queijo", ["Queijo, Orégano"], 40.00, [])
 
 
 
